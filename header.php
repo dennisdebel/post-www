@@ -72,7 +72,7 @@ $(function(){
 	<title></title>
 	<body>
 		
-<div class="fixed"><!-- needed for overlay --></div>
+	<div class="fixed"><!-- needed for overlay --></div>
 
 	
 	<!--site logo title home link -->

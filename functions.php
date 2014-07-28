@@ -67,4 +67,14 @@ return $query;
 add_filter('pre_get_posts', 'exclude_category');
 */
 
+
+
+/* custom excerpt length */
+
+function custom_excerpt_length( $length ) {
+    return 1000;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+
 ?>

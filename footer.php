@@ -2,7 +2,7 @@
 
 
 
-	<?php wp_footer(); ?>
+	<!--<?php wp_footer(); ?>-->
 	
 	<!-- Don't forget analytics -->
 	

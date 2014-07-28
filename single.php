@@ -4,14 +4,6 @@
 
 
 	
-	<div id="overlay"></div>
-
-	<div class="clouds">
-		<div id="cloudLeft"></div>      
-	  	<div id="cloudRight"></div>  
-	</div>    
-
-	
 	<div class="footer">
 	<?php the_title(); ?>
 	</div>
@@ -21,20 +13,13 @@
 	
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-<!--			<div <?php post_class() ?> id="post-<?php the_ID(); ?>"> -->
-			<br />
-	
-			<!-- <div class="hr_single_fat"> </div> -->
-			<div class="singlepost"><a href="<?php echo get_permalink(); ?>"><? if ( has_post_thumbnail() ) {
-		the_post_thumbnail('large');
-	} ?></a>
-	
-	
-				<!--<div class="thedate"><?php the_date(); ?></div>-->
-				<br />
-				
-						
-			
+
+<?php if (has_post_thumbnail( $post->ID ) ): ?>
+					<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+
+					<img id="largeImage" src="<?php echo $image[0]; ?>">
+					<?php endif; ?>
+
 
 
 				<div class="entry">
@@ -46,9 +31,10 @@
 				
 				
 			
-		
-		
-		<?php the_content(); ?>
+			<?php $content = get_the_content(); echo $content;?>
+
+
+		<!--<?php the_content(); ?>-->
 		<br><br>
 		
 		<?php edit_post_link('Edit this entry','','.'); ?>
