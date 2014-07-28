@@ -56,7 +56,7 @@ function get_cart_link(){
 }
 
 
-
+/*
 //EDIT THIS exclude BLOG categorie (id = 6)
 function exclude_category($query) {
 if ( $query->is_home() ) {
@@ -65,6 +65,6 @@ $query->set('cat', '-33, -4');
 return $query;
 }
 add_filter('pre_get_posts', 'exclude_category');
-
+*/
 
 ?>

@@ -7,7 +7,7 @@
 	<!--site logo title home link -->
 	<div class="siteTitle">
 	<a href="<? echo site_url(); ?>">
-	chiara arkesteijn</a>
+	<?php $blog_title = get_bloginfo('name'); echo $blog_title; ?></a>
 	</div>
 
 	<div id="middlemenu">
@@ -16,16 +16,11 @@
 	</div>
 	
 	
-	<div id="overlay"></div>
 
-	<div class="clouds">
-		<div id="cloudLeft"></div>      
-	  	<div id="cloudRight"></div>  
-	</div>    
 
 	
 	<div class="footer">
-	editions - design
+	
 	</div>
 
 	

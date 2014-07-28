@@ -21,15 +21,7 @@ $(function(){
 		//debug: 
 		//sticky.text('posleftDebug: ' + posLeft);
 		
-		//diagonal overlay
-		$('#overlay').css("margin-top", (posBottom*0.7)+'px');
-		
-		//clouds
-		
-		$('#cloudLeft').css("margin-left", posLeft/2);
-		$('#cloudLeft').css("opacity", posLeft/1000);
-		$('#cloudRight').css("margin-right", posRight/2);
-		$('#cloudRight').css("opacity", posLeft/1000);
+
 		
 
 
@@ -38,46 +30,7 @@ $(function(){
 
 	
 	
-	$('#middlemenu').fadeOut(0);
 	
-	//remove title (tooltips) attribute and stor in data array
-	$('[title]').attr('title', function(i, title) {
-    	$(this).data('title', title).removeAttr('title');
-	});
-
-
-	//position posts randomly
-	$('.post').each(function() {
-	  var numRandTop = Math.floor(Math.random()*500);
-  	  var numRandLeft = Math.floor(Math.random()*100);
-	  $(this).css({'top' : '+' + numRandTop});
-	  $(this).css({'left' : '+' + numRandLeft});
-	});
-	
-	
-	//show.hide menu on scroll, of mouse hoover?
-	$(window).scroll(function() {
-		
-		$('#middlemenu').slideDown(1000);
-    });
-
-	var interval = 1;
-
-	setInterval(function(){
-    if(interval == 3){ /* this is the user idle time out in sec */
-		$("#middlemenu").slideUp(1000);
-       	interval = 1; 
-    }
-    interval = interval+1;
-    console.log(interval);
-	},1000); //count in seconds
-
-	//reset counter on scroll
-	$(document).bind('mousemove keypress scroll', function() {
-    interval = 1; 
-    });
-
-
 
 
 	//make sticky footer
@@ -88,12 +41,6 @@ $(function(){
    if (footerTop < docHeight) {
     $('.footer').css('margin-top', 10 + (docHeight - footerTop) + 'px');
    }
-
-
-
-
-
-
 
 
 });
