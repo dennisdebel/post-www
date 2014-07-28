@@ -4,17 +4,6 @@
 
 
 	
-	<!--site logo title home link -->
-	<div class="siteTitle">
-	<a href="<? echo site_url(); ?>">
-	<?php $blog_title = get_bloginfo('name'); echo $blog_title; ?></a>
-	</div>
-
-	<div id="middlemenu">
-	<? include('middlemenu.php'); 
-	?>
-	</div>
-	
 	
 
 

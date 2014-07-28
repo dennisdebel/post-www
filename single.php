@@ -4,18 +4,6 @@
 
 
 	
-	<!--site logo title home link -->
-	<div class="siteTitle">
-	<a href="<? echo site_url(); ?>">
-	chiara arkesteijn</a>
-	</div>
-
-	<div id="middlemenu">
-	<? include('middlemenu.php'); 
-	?>
-	</div>
-	
-	
 	<div id="overlay"></div>
 
 	<div class="clouds">
