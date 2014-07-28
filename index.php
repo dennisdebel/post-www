@@ -13,7 +13,7 @@
 
 <?php if ( in_category('2')) { ?>
 <div class="zooi">
-<a href="<?php echo get_permalink();?>"> 
+<a href="<?php echo get_permalink();?>" class="postLinks"> 
 
 					<!--<?
 					if ( has_post_thumbnail() ) {
@@ -65,7 +65,7 @@
 							}
 						}	else {
 								//of no images are found, align content in center by adding empty div
-								echo "<div class='emptyContainer'> no images found </div>";}
+								echo "<div class='emptyContainer'> </div>";}
 					
 				
 						?>
@@ -79,7 +79,7 @@
 </div>
 <?php } else { ?>
 <div class="featured">
-<a href="<?php echo get_permalink();?>"> <?
+<a href="<?php echo get_permalink();?>" class="postLinks"> <?
 					if ( has_post_thumbnail() ) {
 						the_post_thumbnail('full');
 					} 
