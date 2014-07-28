@@ -93,6 +93,7 @@ font-family:'ad';
 .sitetitle a{
 color:red;
 text-decoration:none;
+z-index: 999;
 }
 
 
@@ -130,7 +131,9 @@ border:1px solid blue;
     color: black;
     font-size: 20px;
     text-decoration: none;
+    z-index: 1000;
 }
+
 
 .footer{
 position:fixed;
