@@ -14,19 +14,43 @@
 $(function(){
     var sticky = $('.fixed');
     $(window).scroll(function(){
-        var posBottom = (sticky.position().top + sticky.outerHeight()+370);
+        var posBottom = (sticky.position().top + sticky.outerHeight());
         
-		posLeft = 400*Math.sin((posBottom*0.01) % (Math.PI * 2)) - (Math.PI / 2);
-		posRight = 400*Math.sin((posBottom*0.01) % (Math.PI * 2)) - (Math.PI / 2);		
+		//posLeft = 400*Math.sin((posBottom*0.01) % (Math.PI * 2)) - (Math.PI / 2);
+		//posRight = 400*Math.sin((posBottom*0.01) % (Math.PI * 2)) - (Math.PI / 2);		
 		//debug: 
-		//sticky.text('posleftDebug: ' + posLeft);
+		console.log('posbottomDebug: ' + posBottom);
 		
+		//diagonal overlay
+		//$('#overlay').css("margin-top", (posBottom*0.7)+'px');
+		
+		//clouds
+		if(posBottom > 26){
 
+			$('#middlemenu').css("position","fixed");
+			$('#middlemenu').css("top","0");
+			$('#middlemenu').css("padding-top","10");
+			$('#middlemenu').css("height","20px");
+			$('#middlemenu').css("border-bottom-color","#666");
+			//$('#siteTitle').css("position","fixed");
+
+
+		} else {
+			if(posBottom < 26){
+				$('#middlemenu').css("position","relative");
+				$('#middlemenu').css("top","30px");
+				$('#middlemenu').css("border-bottom-color","#fff");
+				//$('#siteTitle').css("position","relative");
+
+
+			}
+		}
+		//$('#middlemenu').css("border-bottom","1px solid rgb("+posBottom/200+","+posBottom/200+","+posBottom/200+");
+		
 		
 
 
     });
-
 
 	
 	
@@ -82,6 +106,7 @@ $(function(){
 	</div>
 
 	<div id="middlemenu">
+	<!--about contact --><p>
 	<? include('middlemenu.php'); 
-	?>
+	?></p>
 	</div>
