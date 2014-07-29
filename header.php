@@ -19,8 +19,17 @@ $(function(){
 		//posLeft = 400*Math.sin((posBottom*0.01) % (Math.PI * 2)) - (Math.PI / 2);
 		//posRight = 400*Math.sin((posBottom*0.01) % (Math.PI * 2)) - (Math.PI / 2);		
 		//debug: 
-		console.log('posbottomDebug: ' + posBottom);
 		
+
+		var opacity = 1/posBottom*300;
+
+		//make sure it stays non-opaque
+		if(opacity > 0.2){
+			opacity = 0.2;
+		}
+
+
+		console.log(opacity	);
 		//diagonal overlay
 		//$('#overlay').css("margin-top", (posBottom*0.7)+'px');
 		
@@ -32,6 +41,8 @@ $(function(){
 			$('#middlemenu').css("padding-top","10");
 			$('#middlemenu').css("height","20px");
 			$('#middlemenu').css("border-bottom-color","#666");
+			$('.siteTitle').css("opacity", "0.2");
+			$('.siteTitle').css("opacity", opacity);
 			//$('#siteTitle').css("position","fixed");
 
 
@@ -40,6 +51,7 @@ $(function(){
 				$('#middlemenu').css("position","relative");
 				$('#middlemenu').css("top","30px");
 				$('#middlemenu').css("border-bottom-color","#fff");
+				$('.siteTitle').css("opacity", "0.2");
 				//$('#siteTitle').css("position","relative");
 
 
