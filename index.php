@@ -13,7 +13,8 @@
 
 <?php if ( in_category('2')) { ?>
 <div class="zooi">
-<a href="<?php echo get_permalink();?>" class="postLinks"> 
+<a href="<?php echo get_permalink();?>" class="postTitles"> 
+
 
 					<!--<?
 					if ( has_post_thumbnail() ) {
@@ -52,7 +53,7 @@
 					
 
 								echo "<li><img id='thumb' src='";
-								echo wp_get_attachment_url( $attachment->ID, 'medium');
+								echo wp_get_attachment_url( $attachment->ID, 'thumbnail');
 								echo "'></li>";
 							
 
@@ -72,22 +73,23 @@
 
 
 </ul>
-					<br>
-					 <?php the_title(); ?> </a><br>
+					 <br><span><?php the_title(); ?></span></a><br>
+
 					 <?php the_excerpt(); ?> 
 		
 </div>
 <?php } else { ?>
-<div class="featured">
-<a href="<?php echo get_permalink();?>" class="postLinks"> <?
-					if ( has_post_thumbnail() ) {
-						the_post_thumbnail('full');
-					} 
-					?><br> 
-					 <?php the_title(); ?> </a><br>
-					 <?php the_excerpt(); ?> 
-		
-</div>
+	<div class="featured">
+	<a href="<?php echo get_permalink();?>" class="postTitles"> <?
+						if ( has_post_thumbnail() ) {
+							the_post_thumbnail('full');
+						} 
+						?><br> 
+						 <span><?php the_title(); ?> </span></a><br>
+						 <?php the_excerpt(); ?> 
+			
+	</div>
+
 <?php } ?>
 
 		
