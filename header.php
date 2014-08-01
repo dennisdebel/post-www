@@ -24,8 +24,8 @@ $(function(){
 		var opacity = 1/posBottom*300;
 
 		//make sure it stays non-opaque
-		if(opacity > 0.2){
-			opacity = 0.2;
+		if(opacity > 0.1){
+			opacity = 0.1;
 		}
 
 
@@ -40,18 +40,22 @@ $(function(){
 			$('#middlemenu').css("top","0");
 			$('#middlemenu').css("padding-top","10");
 			$('#middlemenu').css("height","20px");
-			$('#middlemenu').css("border-bottom-color","#666");
-			$('.siteTitle').css("opacity", "0.2");
+			//$('#middlemenu').css("border-bottom-color","#666");
+			$( "#middlemenu" ).addClass( "shadow" );
+
+			$('.siteTitle').css("opacity", "0.1");
 			$('.siteTitle').css("opacity", opacity);
 			//$('#siteTitle').css("position","fixed");
 
 
 		} else {
 			if(posBottom < 26){
+
 				$('#middlemenu').css("position","relative");
 				$('#middlemenu').css("top","30px");
 				$('#middlemenu').css("border-bottom-color","#fff");
-				$('.siteTitle').css("opacity", "0.2");
+				$( "#middlemenu" ).removeClass( "shadow" );
+				$('.siteTitle').css("opacity", "0.1");
 				//$('#siteTitle').css("position","relative");
 
 
@@ -113,8 +117,12 @@ $(function(){
 	
 	<!--site logo title home link -->
 	<div class="siteTitle">
-	<a href="<? echo site_url(); ?>">
-	<?php $blog_title = get_bloginfo('name'); echo $blog_title; ?></a>
+	near future communication logbook </br>
+	a project by </br>
+	dennis de bel and </br>
+	roel roscam abbing </br>
+	2014
+
 	</div>
 
 	<div id="middlemenu">
