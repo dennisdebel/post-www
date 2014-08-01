@@ -17,10 +17,15 @@ Version: 0.1
 
 @charset "UTF-8";
 
+@font-face{ 
+    font-family: 'hell';
+    src: url('helvetica-neue.woff') format('woff');
+}
+
 
 @font-face {
     font-family: 'sub-med';
-   src:  url('inc/sub-med.ttf') format('truetype');
+    src:  url('inc/sub-med.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
