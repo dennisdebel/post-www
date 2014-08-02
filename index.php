@@ -12,7 +12,8 @@
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 		<?php if ( in_category('2')) { ?>
-		<div class="zooi">
+		<div class="post">
+			<div class="zooi">
 			<a href="<?php echo get_permalink();?>" class="postTitles"> 
 
 
@@ -79,8 +80,11 @@
 							 <?php the_excerpt(); ?> 
 				
 		</div>
+	</div>
 <?php } else {   if ( in_category('4')) { ?>
+	<div class="post">
 	<div class="netniet"> 
+
 	<a href="<?php echo get_permalink();?>" class="postTitles"> <?
 						if ( has_post_thumbnail() ) {
 							the_post_thumbnail('full');
@@ -90,7 +94,9 @@
 						 <?php the_excerpt(); ?> 
 			
 	</div>
+</div>
 		<?php } else { ?>
+	<div class="post">
 	<div class="featured">
 	<a href="<?php echo get_permalink();?>" class="postTitles"> <?
 						if ( has_post_thumbnail() ) {
@@ -101,7 +107,7 @@
 						 <?php the_excerpt(); ?> 
 			
 	</div>
-
+</div>
 	<?php } ?>
 <?php } ?>
 
@@ -113,7 +119,7 @@
 			
 		<?php endwhile; ?>
 
-	<?php include (TEMPLATEPATH . '/inc/nav.php' ); ?>
+
 
 	<?php else : ?>
 
@@ -125,9 +131,8 @@
 
 	</div>
 
-
+	<?php include (TEMPLATEPATH . '/inc/nav.php' ); ?>
 	
-
 
 
 

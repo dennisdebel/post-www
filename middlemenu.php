@@ -1,3 +1,7 @@
+<p id="sitetitleSmall">
+ T.I.T.L.E  SUBTITLE FOR SUBTITLES
+</p>
+<p id="menu">
 <?php 
   
   $args = array(
@@ -30,5 +34,6 @@
 
 
  ?>	
+ </p>
 
 
