@@ -29,7 +29,7 @@ $(function(){
 		}
 
 
-		console.log(opacity	);
+		//console.log(opacity	);
 		//diagonal overlay
 		//$('#overlay').css("margin-top", (posBottom*0.7)+'px');
 		
