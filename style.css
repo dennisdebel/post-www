@@ -274,6 +274,7 @@ font-family:'ad';
     width: 100%;
     max-width: 1024px;
     margin: 2em auto;
+  
 }
 
 .featured:nth-child(even) {transform: skew(3deg, 0deg);}
@@ -494,24 +495,71 @@ webkit-box-shadow:
     margin-top: -4px;
 }
 
+/*Dit gaat allemaal over posts*/
 
-
-
-.singlepost{
-padding-top:60px;
+.single_post_container{
+    height: 100%;
+    width: 100%;
+    max-width: 80%;
+    margin: 2em auto;
+  
 }
 
-.singlepost p img{padding-top:20px;}
-
-.singlepost a{
-color:black;
+.post_thumbnail{  /*de thumbnail/featured image van de post*/
+    max-width: 90%;
+    }
+#caption_image{
+    max-width:100%;
+    min-width:640px;
+    box-shadow: 0 0 15px 4px rgba(128, 194, 252, 0.49);
 }
-.singlepost img{
-max-width: 800px;
-height: auto;
-padding-bottom:50px;
-	}
 
+.post_content{ /*de inhoud van de post (text + alle afbeeldingen)*/
+
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+    -webkit-column-gap: 50px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 50px; /* Firefox */
+    column-gap: 50px;
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: justify;
+    float:left;
+    display: inline-block;
+    max-width:100%;
+    font-size:20px;
+    line-height: 28px
+    }
+
+.post_content::first-letter{
+    font-size: 200%;
+    font-style: bold;
+    padding-top:11px;
+}
+.post_content img{
+    float:left;
+    max-width:100%;
+    height:auto;
+    display: block;
+    padding:20px;
+}
+
+/*afbeeldingen met caption*/
+
+.wp-caption{
+    float:left;
+    max-width: 100%;
+    display: block;
+    margin:20px;
+    /*margin:10px;*/
+
+    }
+.wp-caption-text{
+    font-size:50%;
+    border: 1px solid red;
+}
 
 .navigation a{color:white;}
 
