@@ -77,4 +77,20 @@ function custom_excerpt_length( $length ) {
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 
+// /* give thumb captions some space to live filter */
+
+// //DOESNT WORK
+
+// function replace_content($content)
+// {
+// $content = str_replace("<p class='wp-caption-text'>", "<br><br><p class='wp-caption-text'>",$content); 
+// return $content;
+// }
+// add_filter('the_content','replace_content');
+
+
+
+
+
+
 ?>

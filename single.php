@@ -5,7 +5,7 @@
 
 	
 	<div class="footer">
-	<?php the_title(); ?>
+	<span><?php the_title(); ?></span>
 	</div>
 
 	
@@ -28,10 +28,12 @@
 			<?php the_tags( 'Tags: ', ', ', ''); ?>
 		</div>
 				
-		<div class="post_content"			
+		<div class="post_content">		
 			<?php $content = get_the_content();
 				$content = apply_filters('the_content', $content);
-				echo wpautop($content);?>
+				
+				echo wpautop($content);
+			?>
 			<!--<?php the_content(); ?>-->
 		</div>
 		<br><br>
