@@ -575,32 +575,33 @@ webkit-box-shadow:
 .wp-caption{
     float:left;
     height: auto;
-   // min-width: 300px;   
     max-width: 200%;
-    width: 70%;
+    width: 100%;
     display: block;
-    //margin:20px;
     /*margin:10px;*/
-    padding: 20px;
-    margin-right: 20px;
+    //padding: 20px;
+    margin: 20px;
     font-style:italic;
 
     }
 .wp-caption-text{
-    text-align: left; /*justify is a bit strange */
+    text-align: left; /*justify is a bit strange, so is aligning left*/
     font-size:90%;
     word-spacing: -2px;
     line-height: 15px;
-    padding-left: 10px;
-    //text-decoration: underline;
-    //border: 1px solid red;
+    padding: 10px;
+    background-color: rgba(189,255,89,0.5);
+    -webkit-box-shadow: 0px 0px 4px 4px rgba(189,255,89,0.5);
+    -moz-box-shadow: 0px 0px 4px 4px rgba(189,255,89,0.5);
+    box-shadow: 0px 0px 4px 4px rgba(189,255,89,0.5);
 }
 
 .wp-caption img{
+    margin: -15px;
     //width: 50%;
     padding-right: 75%;
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     //border: 1px solid red;
 }
 
