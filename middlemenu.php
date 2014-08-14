@@ -1,5 +1,5 @@
 <p id="sitetitleSmall">
- T.I.T.L.E  SUBTITLE FOR SUBTITLES
+ <a href="<?php echo site_url(); ?>">T.I.T.L.E  SUBTITLE FOR SUBTITLES</a>
 </p>
 <p id="menu">
 <?php 

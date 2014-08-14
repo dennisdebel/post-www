@@ -638,7 +638,9 @@ z-index: 1000;
 
 
 
-
+.tags{
+    text-transform: capitalize;
+}
 /*afbeeldingen met caption*/
 
 .wp-caption{

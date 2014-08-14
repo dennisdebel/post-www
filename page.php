@@ -4,52 +4,43 @@
 
 
 	
-	
-	<div id="overlay"></div>
-
-	<div class="clouds">
-		<div id="cloudLeft"></div>      
-	  	<div id="cloudRight"></div>  
-	</div>    
+	<!-- <div class="footer">
+	<span><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span>
+	</div> -->
 
 	
-	<div class="footer">
-	<?php the_title(); ?>
-	</div>
-
-	
-	<div id="container">
-	
+	<div class="single_post_container">
+		
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-<!--			<div <?php post_class() ?> id="post-<?php the_ID(); ?>"> -->
-			<br />
-	
-			<!-- <div class="hr_single_fat"> </div> -->
-			<div class="singlepost"><a href="<?php echo get_permalink(); ?>"><? if ( has_post_thumbnail() ) {
-		the_post_thumbnail('large');
-	} ?></a>
-	
-	
-				<!--<div class="thedate"><?php the_date(); ?></div>-->
-				<br />
-				
-						
-			
+		<center><div class="post_thumbnail">
+		<?php if (has_post_thumbnail( $post->ID ) ): ?> 
+			<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
 
+			<img id="caption_image" src="<?php echo $image[0]; ?>">
+			<?php endif; ?>
 
-				<div class="entry">
-					
-					<?php wp_link_pages(array('before' => 'Pages: ', 'next_or_number' => 'number')); ?>
-					
-					<?php the_tags( 'Tags: ', ', ', ''); ?>
-				</div>
-				
-				
+		</div></center>
+
+		<div class="entry">
+			<?php wp_link_pages(array('before' => 'Pages: ', 'next_or_number' => 'number')); ?>
 			
-		
-		
-		<?php the_content(); ?>
+			
+		</div>
+				
+		<div class="singleTitle"><span><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span>	</div>
+		<div class="post_content">	
+
+			<?php $content = get_the_content();
+				$content = apply_filters('the_content', $content);
+				
+				echo wpautop($content);
+			?>
+			<p class="tags"><?php the_tags( 'Keywords: ', ', ', ''); ?></p>
+
+			<!--<?php the_content(); ?>-->
+
+		</div>
 		<br><br>
 		
 		<?php edit_post_link('Edit this entry','','.'); ?>

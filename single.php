@@ -36,7 +36,7 @@
 				
 				echo wpautop($content);
 			?>
-			<?php the_tags( 'Keywords: ', ', ', ''); ?>
+			<p class="tags"><?php the_tags( 'Keywords: ', ', ', ''); ?></p>
 
 			<!--<?php the_content(); ?>-->
 

@@ -97,23 +97,23 @@
 </div>
 		<?php } else { ?>
 	<div class="post">
-	<div class="featured">
+		<div class="featured">
 
-	<a href="<?php echo get_permalink();?>" class="postTitles"> 
-	<div class="featuredCrop">
-						<?
-						if ( has_post_thumbnail() ) {
-							the_post_thumbnail('full');
-						} 
-						?>
+			<a href="<?php echo get_permalink();?>" class="postTitles"> 
+			<div class="featuredCrop">
+				<?
+				if ( has_post_thumbnail() ) {
+					the_post_thumbnail('full');
+				} 
+				?>
 
+			</div>
+				<br> 
+			 	<span><?php the_title(); ?> </span></a><br>
+				 <?php the_excerpt(); ?> 
+				
+		</div>
 	</div>
-		<br> 
-						 <span><?php the_title(); ?> </span></a><br>
-						 <?php the_excerpt(); ?> 
-			
-	</div>
-</div>
 	<?php } ?>
 <?php } ?>
 
