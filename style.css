@@ -318,36 +318,61 @@ z-index: 1000;
 
 box-shadow: 
 0px 0px 22px 20px rgba(255, 255, 255, 1),
+40px -30px 5px khaki, 40px 30px 50px coral, -40px -30px 60px turquoise,
 -67px 35px 6px 4px rgba(186, 252, 128, 0.4),
 75px 60px 19px 1px rgba(252, 128, 240, 0.49),
--101px -45px 29px 4px rgba(128, 194, 252, 0.49),
+
 61px -5px 26px 4px rgba(255, 255, 255, 0.67),
 63px 56px 26px 13px rgba(255, 251, 25, 0.9);
 
 moz-box-shadow: 
 0px 0px 22px 20px rgba(255, 255, 255, 1),
+40px -30px 5px khaki, 40px 30px 50px coral, -40px -30px 60px turquoise,
 -67px 35px 6px 4px rgba(186, 252, 128, 0.4),
 75px 60px 19px 1px rgba(252, 128, 240, 0.49),
--101px -45px 29px 4px rgba(128, 194, 252, 0.49),
+
 61px -5px 26px 4px rgba(255, 255, 255, 0.67),
 63px 56px 26px 13px rgba(255, 251, 25, 0.9);
 
 webkit-box-shadow: 
 0px 0px 22px 20px rgba(255, 255, 255, 1),
+40px -30px 5px khaki, 40px 30px 50px coral, -40px -30px 60px turquoise,
+-67px 35px 6px 4px rgba(186, 252, 128, 0.4),
+75px 60px 19px 1px rgba(252, 128, 240, 0.49),
+
+61px -5px 26px 4px rgba(255, 255, 255, 0.67),
+63px 56px 26px 13px rgba(255, 251, 25, 0.9);
+
+
+/*0px 0px 22px 20px rgba(255, 255, 255, 1),
 -67px 35px 6px 4px rgba(186, 252, 128, 0.4),
 75px 60px 19px 1px rgba(252, 128, 240, 0.49),
 -101px -45px 29px 4px rgba(128, 194, 252, 0.49),
 61px -5px 26px 4px rgba(255, 255, 255, 0.67),
-63px 56px 26px 13px rgba(255, 251, 25, 0.9);
+63px 56px 26px 13px rgba(255, 251, 25, 0.9);*/
 
 //background-color: rgba(248, 219, 190, 0.48);
 }
 
+/*cropping to fit in featured portrait images that otherwise would fill twice the screen*/
+.featuredCrop{
+
+       display:block;
+    position:relative;
+    padding-bottom:70%; /*amount of cropping*/
+    overflow:hidden;
+    
+}
 .featured img{
-    min-width: 100%;
+   /* min-width: 100%;
     max-width: 100%;
     height: auto;
-    float:left;
+    float:left;*/
+   //bottom: -40%; /*doesnt work with landscape images...cropping offset (0 for bottom, comment out for only displaying the top of the img, -50% for center...)*/
+        position:absolute;
+    width: 100%;
+    height:auto;
+    display:block;
 
 
 }
@@ -356,6 +381,7 @@ webkit-box-shadow:
 
 
 .featured p{
+      width: 100%;
     line-height: 28px;
     -webkit-column-count: 3; /* Chrome, Safari, Opera */
     -moz-column-count: 3; /* Firefox */

@@ -98,11 +98,17 @@
 		<?php } else { ?>
 	<div class="post">
 	<div class="featured">
-	<a href="<?php echo get_permalink();?>" class="postTitles"> <?
+
+	<a href="<?php echo get_permalink();?>" class="postTitles"> 
+	<div class="featuredCrop">
+						<?
 						if ( has_post_thumbnail() ) {
 							the_post_thumbnail('full');
 						} 
-						?><br> 
+						?>
+
+	</div>
+		<br> 
 						 <span><?php the_title(); ?> </span></a><br>
 						 <?php the_excerpt(); ?> 
 			
