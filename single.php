@@ -4,9 +4,9 @@
 
 
 	
-	<div class="footer">
-	<span><?php the_title(); ?></span>
-	</div>
+	<!-- <div class="footer">
+	<span><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span>
+	</div> -->
 
 	
 	<div class="single_post_container">
@@ -25,16 +25,21 @@
 		<div class="entry">
 			<?php wp_link_pages(array('before' => 'Pages: ', 'next_or_number' => 'number')); ?>
 			
-			<?php the_tags( 'Tags: ', ', ', ''); ?>
+			
 		</div>
 				
-		<div class="post_content">		
+		<div class="singleTitle"><span><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span>	</div>
+		<div class="post_content">	
+
 			<?php $content = get_the_content();
 				$content = apply_filters('the_content', $content);
 				
 				echo wpautop($content);
 			?>
+			<?php the_tags( 'Keywords: ', ', ', ''); ?>
+
 			<!--<?php the_content(); ?>-->
+
 		</div>
 		<br><br>
 		

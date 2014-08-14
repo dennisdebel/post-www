@@ -253,7 +253,6 @@ margin-bottom: 20px;
 
 .footer{
 position:fixed;
-color:black;
 height:80px;
 width:90%;
 text-align:right;
@@ -276,6 +275,7 @@ z-index: 1000;
 .footer a{
     //margin-bottom: 100px;
     text-decoration: none;
+    color:#2b2b2b;
 }
 
 .footer p{
@@ -551,6 +551,9 @@ webkit-box-shadow:
   
 }
 
+
+
+
 .post_thumbnail{  /*de thumbnail/featured image van de post*/
     max-width: 90%;
     }
@@ -561,6 +564,7 @@ webkit-box-shadow:
 }
 
 .post_content{ /*de inhoud van de post (text + alle afbeeldingen)*/
+
 
     -webkit-column-count: 2; /* Chrome, Safari, Opera */
     -moz-column-count: 2; /* Firefox */
@@ -594,7 +598,46 @@ webkit-box-shadow:
 
 .post_content p{
     padding-top: 20px;
+/*prevent paragraphs from breaking up over columns*/
+    -webkit-column-break-inside:avoid;
+    -moz-column-break-inside:avoid;
+    -o-column-break-inside:avoid;
+    -ms-column-break-inside:avoid;
+    column-break-inside:avoid;
 }
+
+.post_content  a{
+  color: #444;
+  text-decoration: none;
+  border-bottom: 1px solid #444;
+  
+}
+
+.singleTitle{
+height:80px;
+width:90%;
+font-family: Serif, Arial, 'ad', Helvetica;
+color: #2b2b2b;
+font-size: 25px;
+z-index: 1000;
+ text-decoration: none;
+}
+
+.singleTitle span{
+    display:inline-block;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #2b2b2b;
+   margin-top: 50px;
+ text-decoration: none;
+}
+.singleTitle a{
+    //margin-bottom: 100px;
+    text-decoration: none;
+    color:#2b2b2b;
+}
+
+
+
 
 /*afbeeldingen met caption*/
 
