@@ -101,9 +101,9 @@ $(function(){
 
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0;">
 
-<meta meta name="viewport" content="width=device-width, initial-scale=0.1">
-<meta name="viewport" content="user-scalable=yes" >
+<!-- <meta name="viewport" content="user-scalable=yes" > -->
 
 
 
