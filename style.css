@@ -622,16 +622,40 @@ webkit-box-shadow:
   
 }
 
+fieldset { 
+    border:1px solid #444 
+}
+
+legend {
+  padding: 0.2em 0.5em;
+  border:1px solid #444;
+  color:#444;
+  font-size:70%;
+  text-align:right;
+  }
+
 .post_content ul{
-border: 1px solid #000;
+
  margin: 2em;
  //width: 10em;
- padding: 5px;
+ padding: 10px;
  font-size: 80%;
+
+ /*prevent paragraphs from breaking up over columns*/
+    -webkit-column-break-inside:avoid;
+    -moz-column-break-inside:avoid;
+    -o-column-break-inside:avoid;
+    -ms-column-break-inside:avoid;
+    column-break-inside:avoid;
 }
 
 .post_content li{
-    
+    /*prevent paragraphs from breaking up over columns*/
+    -webkit-column-break-inside:avoid;
+    -moz-column-break-inside:avoid;
+    -o-column-break-inside:avoid;
+    -ms-column-break-inside:avoid;
+    column-break-inside:avoid;
 }
 
 

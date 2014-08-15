@@ -35,7 +35,7 @@
 				<?
 				$args = array(
 					'post_type'   => 'attachment',
-					'numberposts' => -1,
+					'numberposts' => 18,
 					'post_status' => 'any',
 					'post_parent' => $post->ID,
 				
