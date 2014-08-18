@@ -9,7 +9,7 @@
 
 
       
-<script>           
+<script>
 
 $(function(){
     var sticky = $('.fixed');
@@ -73,16 +73,40 @@ $(function(){
 	
 
 
-	//make sticky footer
-	var docHeight = $(window).height();
-   var footerHeight = $('.footer').height();
-   var footerTop = $('.footer').position().top + footerHeight;
+	// //make sticky footer
+	// var docHeight = $(window).height();
+ //   var footerHeight = $('.footer').height();
+ //   var footerTop = $('.footer').position().top + footerHeight;
    
-   if (footerTop < docHeight) {
-    $('.footer').css('margin-top', 10 + (docHeight - footerTop) + 'px');
-   }
+ //   if (footerTop < docHeight) {
+ //    $('.footer').css('margin-top', 10 + (docHeight - footerTop) + 'px');
+ //   }
 
 
+
+
+//automatic citation/footnotes
+ $(".post_content").append("<ol id=\"footnotes\"></ol>");
+   footnote = 1;
+   $("q[cite],q[title],blockquote[cite],blockquote[title]").addClass("footnote");
+   $(".footnote").each(function() {
+      $(this).append("<sup>"+footnote+"</sup>");
+      cite="<li>";
+      url=$(this).attr("cite");
+      title=$(this).attr("title");
+      if(title && url) {
+         cite+="<a href=\""+url+"\">"+title+"</a>";
+      } else if(title) {
+         cite+=title;
+      } else if(url) {
+         cite+="<a href=\""+url+"\">"+url+"</a>";
+      }
+      cite+="</li>";
+      $("#footnotes").append(cite);
+      footnote++;
+   });
+
+   
 });
 
 
@@ -91,17 +115,16 @@ $(function(){
 
 
 
- 
-	
 
-			             
+
+           
     
 </script>		 
 
 
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0;">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- <meta name="viewport" content="user-scalable=yes" > -->
 

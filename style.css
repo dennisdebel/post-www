@@ -24,7 +24,13 @@ Version: 0.1
 
 
 
-
+@font-face {
+    font-family: 'ModernMonospaceRegular';
+    src: url('inc/modernmono9.eot');
+    src: url('inc/modernmono9.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 @font-face {
     font-family: 'sub-med';
@@ -54,7 +60,7 @@ Version: 0.1
 *{
     margin: 0; 
     padding: 0;
-    list-style-type: none;
+    //list-style-type: none;
 }
 
 body,html{
@@ -542,6 +548,10 @@ webkit-box-shadow:
     //width: 31%;
 }
 
+.masonaryZooi{
+list-style: none;
+}
+
 .masonaryZooi img{
     display: inline-block;
     margin-bottom: 0px;
@@ -626,6 +636,7 @@ webkit-box-shadow:
 
 fieldset { 
     border:1px solid #444 
+    width: 90%;
 }
 
 legend {
@@ -675,6 +686,7 @@ blockquote {
   //quotes: "\201C""\201D""\2018""\2019";
   color:#444;
 font-style: italic;
+
 }
 
 
@@ -723,7 +735,7 @@ z-index: 1000;
     /*margin:10px;*/
     //padding: 20px;
     margin: 20px;
-    font-style:italic;
+    //font-style:italic;
     /*prevent paragraphs from breaking up over columns*/
     -webkit-column-break-inside:avoid;
     -moz-column-break-inside:avoid;
@@ -734,14 +746,15 @@ z-index: 1000;
     }
 .wp-caption-text{
     text-align: left; /*justify is a bit strange, so is aligning left*/
-    font-size:90%;
+    font-size:12px;
+    font-family: 'ModernMonospaceRegular';
     word-spacing: -2px;
     line-height: 15px;
     padding: 10px;
-    background-color: rgba(189,255,89,0.5);
-    -webkit-box-shadow: 0px 0px 4px 4px rgba(189,255,89,0.5);
-    -moz-box-shadow: 0px 0px 4px 4px rgba(189,255,89,0.5);
-    box-shadow: 0px 0px 4px 4px rgba(189,255,89,0.5);
+    background-color: rgba(189,255,89,0.0);
+    -webkit-box-shadow: 0px 0px 4px 4px rgba(189,255,89,0.0);
+    -moz-box-shadow: 0px 0px 4px 4px rgba(189,255,89,0.0);
+    box-shadow: 0px 0px 4px 4px rgba(189,255,89,0.0);
 }
 
 .wp-caption img{
@@ -752,6 +765,42 @@ z-index: 1000;
     margin-bottom: 5px;
     //border: 1px solid red;
 }
+
+#footnotes{
+    width: 100%;
+   margin-left: 20px;
+    border:1px solid white; /*uglu uglu hack to show footnote numbering in chrome...*/
+}
+
+#footnotes ol{
+list-style-type: decimal; 
+
+}
+
+/*remove uglye qoutes from citations, qoutes, footnotes*/
+q
+{
+    quotes: none;
+}
+
+/*
+Safari doesn't support the quotes attribute, so we do this instead.
+*/
+q:before, q:after
+{
+    /*
+    CSS 2; used to remove quotes in case "none" fails below.
+    */
+    content: "";
+    /*
+    CSS 2.1; will remove quotes if supported, and override the above.
+    User-agents that don't understand "none" should ignore it, and
+    keep the above value. This is here for future compatibility,
+    though I'm not 100% convinced that it's a good idea...
+    */
+    content: none;
+}
+
 
 .navigation a{color:white;}
 
