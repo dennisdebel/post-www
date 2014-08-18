@@ -90,18 +90,20 @@ $(function(){
    footnote = 1;
    $("q[cite],q[title],blockquote[cite],blockquote[title]").addClass("footnote");
    $(".footnote").each(function() {
-      $(this).append("<sup>"+footnote+"</sup>");
-      cite="<li>";
+      
+      cite="<a name='"+footnote+"'><li>";
       url=$(this).attr("cite");
       title=$(this).attr("title");
+      $(this).append("<a href='#"+footnote+"'><sup>"+footnote+"</sup></a>");
+
       if(title && url) {
-         cite+="<a href=\""+url+"\">"+title+"</a>";
+         cite+="<a href=\""+url+"\" target='_blank'>"+title+"</a>";
       } else if(title) {
          cite+=title;
       } else if(url) {
-         cite+="<a href=\""+url+"\">"+url+"</a>";
+         cite+="<a href=\""+url+"\"target='_blank'>"+url+"</a>";
       }
-      cite+="</li>";
+      cite+="</li></a>";
       $("#footnotes").append(cite);
       footnote++;
    });

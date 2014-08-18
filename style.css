@@ -139,6 +139,7 @@ letter-spacing:3px;
 }  
 
 .siteTitle{
+    
     text-align: center;
       width: 100%;
         margin: 0 auto;
@@ -635,16 +636,23 @@ list-style: none;
 }
 
 fieldset { 
-    border:1px solid #444 
+    border:1px solid #444;
     width: 90%;
+
+/*prevent paragraphs from breaking up over columns*/
+    -webkit-column-break-inside:avoid;
+    -moz-column-break-inside:avoid;
+    -o-column-break-inside:avoid;
+    -ms-column-break-inside:avoid;
+    column-break-inside:avoid;
 }
 
 legend {
   padding: 0.2em 0.5em;
+  margin: 10px;
   border:1px solid #444;
   color:#444;
   font-size:70%;
-  text-align:right;
   }
 
 .post_content ul{
@@ -723,6 +731,10 @@ z-index: 1000;
 
 .tags{
     text-transform: capitalize;
+        font-family: 'ModernMonospaceRegular';
+    padding-top: 50px;
+    padding-left: 50px;
+    font-size:12px;
 }
 /*afbeeldingen met caption*/
 
@@ -767,9 +779,13 @@ z-index: 1000;
 }
 
 #footnotes{
+    font-family: 'ModernMonospaceRegular';
+      margin-top: 40px;
+    padding-left: 50px;
+    font-size:12px;
     width: 100%;
-   margin-left: 20px;
-    border:1px solid white; /*uglu uglu hack to show footnote numbering in chrome...*/
+   //margin-left: 20px;
+    //border:1px solid white; /*uglu uglu hack to show footnote numbering in chrome...*/
 }
 
 #footnotes ol{
@@ -866,7 +882,12 @@ a > img{
     column-gap: 13px;
     //width: 31%;
 }*/
-
+.tags {
+    padding-left: 0px;
+}
+#footnotes{
+    padding-left: 0px;
+}
 
 }
 
