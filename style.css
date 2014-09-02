@@ -786,6 +786,13 @@ z-index: 1000;
     width: 100%;
    //margin-left: 20px;
     //border:1px solid white; /*uglu uglu hack to show footnote numbering in chrome...*/
+
+/*prevent paragraphs from breaking up over columns*/
+    -webkit-column-break-inside:avoid;
+    -moz-column-break-inside:avoid;
+    -o-column-break-inside:avoid;
+    -ms-column-break-inside:avoid;
+    column-break-inside:avoid;
 }
 
 #footnotes ol{
