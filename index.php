@@ -100,13 +100,15 @@
 		<div class="featured">
 
 			<a href="<?php echo get_permalink();?>" class="postTitles"> 
-			<div class="featuredCrop">
+			
 				<?
 				if ( has_post_thumbnail() ) {
-					the_post_thumbnail('full');
+					//the_post_thumbnail('full');
+					$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
+					$url = $thumb['0'];
 				} 
 				?>
-
+			<div class="featuredCrop" style="background-image:url(<? echo $url;?>);">
 			</div>
 				<br> 
 			 	<span><?php the_title(); ?> </span></a><br>

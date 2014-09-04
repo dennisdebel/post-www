@@ -374,25 +374,17 @@ webkit-box-shadow:
 /*cropping to fit in featured portrait images that otherwise would fill twice the screen*/
 .featuredCrop{
 
-       display:block;
+     background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;  
+
     position:relative;
-    padding-bottom:70%; /*amount of cropping*/
-    overflow:hidden;
+    width: 100%;
+    height: 0;
+    padding-bottom: 60% ; /* % of width, defines aspect ratio*/
     
 }
-.featured img{
-   /* min-width: 100%;
-    max-width: 100%;
-    height: auto;
-    float:left;*/
-   //bottom: -40%; /*doesnt work with landscape images...cropping offset (0 for bottom, comment out for only displaying the top of the img, -50% for center...)*/
-        position:absolute;
-    width: 100%;
-    height:auto;
-    display:block;
 
-
-}
 
 
 
