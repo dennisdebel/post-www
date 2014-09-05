@@ -88,9 +88,52 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 20 );
 // }
 // add_filter('the_content','replace_content');
 
+/*
+ * Fix the extra 10 pixel width issue for image captions
+ */
+// add_filter('wp_caption', 'fixed_img_caption_shortcode');
+// add_filter('caption', 'fixed_img_caption_shortcode');
+// function fixed_img_caption_shortcode($attr, $content = null) {
+//     // Allow plugins/themes to override the default caption template.
+//     $output = apply_filters('img_caption_shortcode', '', $attr, $content);
+//     if ( $output != '' ) return $output;
+//     extract(shortcode_atts(array(
+//         'id'=> '',
+//         'align' => 'alignnone',
+//         'width' => '',
+//         'caption' => ''), $attr));
+//     if ( 1 > (int) $width || empty($caption) )
+//     return $content;
+//     if ( $id ) $id = 'id="' . esc_attr($id) . '" ';
+//     return '<div ' . $id . 'class="wp-caption ' . esc_attr($align)
+//     . '" style="width: ' . ((int) $width) . 'px">'
+//     . do_shortcode( $content ) . '<p class="wp-caption-text">'
+//     . $caption . '</p></div>';
+// }
+
+//  function replace_content($content)
+//  {
+
+// // // $old_content = 'Hello [caption id="attachment_367" align="aligncenter" width="432" caption="Version 2010!!"] World!';
+// // // $new_content = preg_replace('/\[.*?\]/', '', $old_content);
+// // // echo $new_content; // result: "Hello World!"
+
+// // //filter captioned images..
+
+//  preg_match_all('/\[caption[^\]]*](.*)\[\/caption[^\]]*]/im', $content, $matches);
+ 
+//  //return array($matches);
+// // $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/ii', $post->post_content, $matches);
+//  //$content = preg_replace('/<img.+src=[\'"]([^\'"]+)[\'"].*>/ii', 'lol', $content);
 
 
+// // //if($match) echo "result=".$match[1];
 
 
+// // //preg_match_all('/\[.*?\]/', $content, $matches);
+// // //echo "<div";
+//  return $matches;
+//  }
+//  add_filter('the_content','replace_content');
 
 ?>

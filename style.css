@@ -569,7 +569,9 @@ list-style: none;
 
 
 .post_thumbnail{  /*de thumbnail/featured image van de post*/
-    max-width: 90%;
+    padding-top:30px;
+    //margin: 0 auto;
+    max-width: 99%;
     }
 #caption_image{
     max-width:100%;
@@ -827,6 +829,37 @@ a > img{
 
 
 }
+
+/* separate images fron text in the_content (put div with id:imgs around them..)*/
+#imgs{
+    //border:1px solid red;
+position:relative;
+display: inline-block;}
+.wp-caption img{width: 100%;}
+#attachment img{max-width: 100%;}
+
+.captionedImgs{
+    
+    text-align: left; /*justify is a bit strange, so is aligning left*/
+    font-size:12px;
+    font-family: 'ModernMonospaceRegular';
+    word-spacing: -2px;
+    line-height: 15px;
+    margin: 10px;
+    background-color: rgba(189,255,89,0.0);
+    -webkit-box-shadow: 0px 0px 4px 4px rgba(189,255,89,0.0);
+    -moz-box-shadow: 0px 0px 4px 4px rgba(189,255,89,0.0);
+    box-shadow: 0px 0px 4px 4px rgba(189,255,89,0.0);
+}
+
+.captionedImgs img{
+    padding: 0px;
+    padding-bottom: 10px;
+    padding-top: 40px;
+width: 100%;
+
+}
+
 
 @media all and (max-width: 900px) {
     /* All smallscreen only CSS goes here */
