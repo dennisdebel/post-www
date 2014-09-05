@@ -575,7 +575,7 @@ list-style: none;
     }
 #caption_image{
     max-width:100%;
-    min-width:640px;
+   // min-width:640px;
     box-shadow: 0 0 15px 4px rgba(128, 194, 252, 0.49);
 }
 
@@ -864,9 +864,17 @@ width: 100%;
 @media all and (max-width: 900px) {
     /* All smallscreen only CSS goes here */
 
+/*index page*/
+
+ img {height: auto;} 
+
+
+.postTitles img{
+    max-width: 100%;
+}
 .post_content{ /*de inhoud van de post (text + alle afbeeldingen)*/
 
-
+    padding-top: 50px;
     -webkit-column-count: 1; /* Chrome, Safari, Opera */
     -moz-column-count: 1; /* Firefox */
     column-count: 1;
@@ -879,7 +887,8 @@ width: 100%;
 
 .featured p{
       width: 100%;
-    line-height: 28px;
+      font-size: 11px;
+    line-height: 20px;
     -webkit-column-count: 1; /* Chrome, Safari, Opera */
     -moz-column-count: 1; /* Firefox */
     column-count: 1;
@@ -888,10 +897,18 @@ width: 100%;
     column-gap: 20px;
 
 }
+.featured {width: 75%;}
 
-.netniet {width: 92%;}
+.zooi{
+    text-align:center;
+    padding-left: 20%;
+    width: 75%;} /*needs some work, will break eventually*/
+
+.netniet {width: 75%;}
+
 .netniet p{
-    line-height: 28px;
+    font-size: 11px;
+    line-height: 20px;
     -webkit-column-count: 1; /* Chrome, Safari, Opera */
     -moz-column-count: 1; /* Firefox */
     column-count: 1;
@@ -903,6 +920,26 @@ width: 100%;
     text-align: justify;
     padding: 20px;
 }
+
+/*single post*/
+
+.single_post_container{  /*de thumbnail/featured container van de image van de post*/
+    max-width: 80%;
+    }
+
+.post_thumbnail{  /*de thumbnail/featured image van de post*/
+    padding-top:30px;
+    text-align: center;
+    max-width: 100%;
+    }
+
+
+.post_thumbnail img{  /*de thumbnail/featured image van de post*/
+
+    max-width: 10%;
+    }
+
+
 /*
 .masonaryZooi{
     padding-top: 20px;
@@ -920,6 +957,8 @@ width: 100%;
 #footnotes{
     padding-left: 0px;
 }
+
+
 
 }
 
