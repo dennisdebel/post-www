@@ -12,6 +12,18 @@
 <script>
 
 $(function(){
+	
+	// //hide excerpt on mobile (doenst work with infinitescoll, and callback doesnt work on infinite scroll)
+	// var isMobile = window.matchMedia("only screen and (max-width: 760px)");
+
+ //    if (isMobile.matches) {
+ //      $('p.excerpt').css("display","none");
+ //    } else {
+ //         $('p.excerpt').css("display","block")
+ //    }
+
+
+
     var sticky = $('.fixed');
     $(window).scroll(function(){
         var posBottom = (sticky.position().top + sticky.outerHeight());

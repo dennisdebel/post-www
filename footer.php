@@ -15,7 +15,7 @@ $( document ).ready(function() {
 var originalHeight = $( document ).height(); 
 
 $( window ).resize(function() { 
-    console.log( ($( document ).height()-originalHeight) );  
+    //console.log( ($( document ).height()-originalHeight) );  
     //$('#test').css("margin-top",+($( document ).height()-originalHeight));    
 });  
 
@@ -34,7 +34,7 @@ $('#container').infinitescroll({
                 loading          : {
                         img             : "<?php echo get_template_directory_uri(); ?>/images/ajax-loader.gif",
                         msgText         : " ",
-                        finishedMsg     : "done"
+                        finishedMsg     : " "
                 }
        
                     }); 

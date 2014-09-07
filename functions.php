@@ -136,4 +136,10 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 20 );
 //  }
 //  add_filter('the_content','replace_content');
 
+//add class to excerpt for shortening it on mobile devices
+add_filter( "the_excerpt", "add_class_to_excerpt" );
+function add_class_to_excerpt( $excerpt ) {
+    return str_replace('<p', '<p class="excerpt"', $excerpt);
+}
+
 ?>

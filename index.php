@@ -76,7 +76,7 @@
 
 		</ul>
 							 <br><span><?php the_title(); ?></span></a><br>
-
+							 
 							 <?php the_excerpt(); ?> 
 				
 		</div>
