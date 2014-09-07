@@ -818,7 +818,9 @@ q:before, q:after
 }
 
 
-.navigation a{color:white;}
+.navigation a{
+opacity: 0;
+    color:white;}
 
 /* ie fixes */
 
